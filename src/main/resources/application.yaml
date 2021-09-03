@@ -1,0 +1,9 @@
+camera:
+  image-storage-directory: "${user.home}/desktop/images"
+  image-format: "png"
+
+flags:
+  # Select camera work mode:
+  # true - application is always connected to the camera. This option makes photo taking delay smaller.
+  # false - application connects to the camera only when it is time to take a photo.
+  camera-always-on: false
