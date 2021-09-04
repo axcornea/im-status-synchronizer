@@ -2,6 +2,9 @@ camera:
   image-storage-directory: "${user.home}/desktop/images"
   image-format: "png"
 
+classifier:
+  model-directory: "${user.home}/desktop/models"
+
 flags:
   # Select camera work mode:
   # true - application is always connected to the camera. This option makes photo taking delay smaller.
