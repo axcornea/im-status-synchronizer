@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
@@ -24,6 +25,11 @@ public class UniversalCamera extends UniversalCameraBase {
 
     protected void setupCamera() {
         webcam = Webcam.getDefault();
+
+        // TODO Make it configurable through the configuration properties
+        var hdViewSize = new Dimension(1280, 720);
+        webcam.setCustomViewSizes(new Dimension[] { hdViewSize });
+        webcam.setViewSize(hdViewSize);
     }
 
     @Override
